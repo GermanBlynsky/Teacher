@@ -19,12 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Degree.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Post.cpp" />
+    <ClCompile Include="Rank.cpp" />
+    <ClCompile Include="Teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Solver\Solver.vcxproj">
       <Project>{4c16314d-5284-4b2c-83b0-37329e7e4ea6}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="Degree.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Post.h" />
+    <ClInclude Include="Rank.h" />
+    <ClInclude Include="Teacher.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
