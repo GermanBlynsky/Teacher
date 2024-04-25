@@ -11,7 +11,7 @@ namespace uizi {
         Degree degree;
         Rank rank;
     public:
-        Teacher(FullName name, Date birth, Post post, Degree degree, Rank rank); // Наследник! Инициализировать базовый класс!
+        Teacher(FullName name, Date birth, Post post, Degree degree, Rank rank); // Наследник! Инициализировать базовый клсс!
         bool equalByDate(Teacher other);
         bool equalByName(Teacher other);
         bool equalByPost(Teacher other);
