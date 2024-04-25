@@ -13,7 +13,7 @@ namespace uizi {
 		Date birth;
 	public:
 		Person(Gender gender, FullName name, Date birth);
-		std::string& toString();
+		std::string toString();
 		friend std::ifstream& operator>>(std::ifstream& is, Person person);
 	};
 

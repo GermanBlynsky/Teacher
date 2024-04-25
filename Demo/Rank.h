@@ -10,7 +10,7 @@ namespace uizi {
 		Rank(Rank_ rank);
 		std::string toString();
 		void setRank(Rank_ rank);
-		friend std::istream& operator>>(std::istream& is, Rank rank) {
+		friend std::istream& operator>>(std::istream& is, Rank &rank) {
 			std::string rankStr;
 			is >> rankStr;
 			if (rankStr == "No rank") {

@@ -14,7 +14,7 @@ namespace uizi {
 			std::string postStr;
 			is >> postStr;
 			if (postStr == "Great") {
-				post.setPost(GreatPost);
+				post.setPost(GreatPost);  
 				return is;
 			}
 			if (postStr == "Docent") {
