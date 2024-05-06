@@ -8,7 +8,7 @@ void uizi::Rank::setRank(Rank_ rank) {
 	this->rank = rank;
 }
 
-std::string uizi::Rank::toString() {
+std::string uizi::Rank::toString() const {
 	if (rank == NoRank) {
 		return "No rank";
 	}

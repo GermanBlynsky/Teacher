@@ -11,7 +11,24 @@ namespace uizi {
 		int year;
 	public:
 		Date(int date, int month, int year);
-		friend std::ifstream& operator>>(std::ifstream& is, Date date);
-		friend std::ofstream& operator<<(std::ofstream& is, Date date);
+		friend std::istream& operator>>(std::istream& is, Date& date) {
+			int dateInt = 0;
+			int  monthInt = 0;
+			int yearInt = 0;
+			is >> dateInt >> monthInt >> yearInt;
+			if (dateInt <= 0 || dateInt > 31 || monthInt <= 0 || monthInt > 12 || yearInt < 0) {
+				throw;
+			}
+			date.date = dateInt;
+			date.month = (Month)monthInt;
+			date.year = yearInt;
+			return is;
+		}
+		friend std::ostream& operator<<(std::ostream& os, const Date& date) {
+			os << date.toString();
+			return os;
+		}
+		Date();
+		std::string toString() const;
 	};
 }

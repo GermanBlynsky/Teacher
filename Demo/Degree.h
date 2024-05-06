@@ -8,9 +8,9 @@ namespace uizi {
 		Degree_ degree;
 	public:
 		Degree(enum Degree_ degree);
-		std::string toString();
+		std::string toString() const;
 		void setDegree(Degree_ degree);
-		friend std::istream& operator>>(std::istream& is, Degree degree) {
+		friend std::istream& operator>>(std::istream& is, Degree& degree) {
 			std::string degreeStr;
 			is >> degreeStr;
 			if (degreeStr == "Docent") {
