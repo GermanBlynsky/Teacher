@@ -11,12 +11,12 @@ namespace uizi {
         Degree degree;
         Rank rank;
     public:
-        Teacher(FullName name, Date birth, Post post, Degree degree, Rank rank); // Наследник! Инициализировать базовый class!
-        bool equalByDate(Teacher other);
-        bool equalByName(Teacher other);
-        bool equalByPost(Teacher other);
-        bool equalByDagree(Teacher other);
-        bool equalByRank(Teacher other);
+        Teacher(const FullName& name, const Date& birth, const Post& post, const Degree& degree, const Rank& rank);
+        bool equalByDate(const Teacher& other);
+        bool equalByName(const Teacher& other);
+        bool equalByPost(const Teacher& other);
+        bool equalByDagree(const Teacher& other);
+        bool equalByRank(const Teacher& other);
         std::string& toString();
         friend std::ifstream& operator>>(std::ifstream& is, Teacher person);
         friend std::ofstream& operator<<(std::ofstream& is, Teacher person);
