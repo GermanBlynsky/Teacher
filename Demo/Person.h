@@ -6,7 +6,6 @@
 namespace uizi {
 	using FullName = std::string;
 	enum Gender { Male = 0, Female = 1, NonBinary = 3 };
-	//using Date = std::string; Не понятно, как определить Date, ведь чтоб определить его грамотно надо писать целый класс Date
 	class Person
 	{
 		FullName name;
