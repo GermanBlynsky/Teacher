@@ -30,6 +30,7 @@ namespace uizi {
 			os << rank.toString();
 			return os;
 		}
+		Rank();
 	};
 }
 

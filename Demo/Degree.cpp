@@ -13,5 +13,8 @@ std::string uizi::Degree::toString() const {
 	if (degree == ProfessorDegree) {
 		return "Professor";
 	}
-	throw;
+	throw std::invalid_argument("wrong value degree!");
+}
+uizi::Degree::Degree() {
+	this->degree = DocentDegree;
 }

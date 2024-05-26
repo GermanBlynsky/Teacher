@@ -21,8 +21,9 @@ namespace uizi {
 				degree.setDegree(ProfessorDegree);
 				return is;
 			}
-			throw;
+			throw std::invalid_argument("wrong value degree!");
 		}
+		Degree();
 	};
 }
 

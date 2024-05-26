@@ -1,6 +1,7 @@
 #include "Person.h"
 #include "Date.h"
 #include "Degree.h"
+#include "sstream"
 
 uizi::Person::Person(const Gender& gender, const FullName& name, const Date& birth){
 	this->gender = gender;
@@ -10,15 +11,15 @@ uizi::Person::Person(const Gender& gender, const FullName& name, const Date& bir
 
 std::string uizi::Person::toString() const
 {
+	std::stringstream a{};
 	if (gender == Male) {
-		return name + "Male" + birth.toString();
+		a << name << "Male" << birth;
 	}
 	if (gender == Female) {
-		return name + "Female" + birth.toString();
+		a << name << "Female" << birth;
 	}
 	if (gender == NonBinary) {
-		return name + "NonBinary" + birth.toString();
+		a << name << "NonBinary" << birth;
 	}
-	throw;
+	return a.str();
 }
-

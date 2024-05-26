@@ -24,11 +24,8 @@ namespace uizi {
 			int gender;
 			Date birth;
 			if (is >> name >> gender >> birth) {
-				person.name = name;
-				person.gender = static_cast<Gender>(gender);
-				person.birth = birth;
+				person = Person(static_cast<Gender>(gender), name, birth);
 			}
-
 			return is;
 		}
 	};

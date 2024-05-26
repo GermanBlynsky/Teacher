@@ -18,5 +18,8 @@ std::string uizi::Rank::toString() const {
 	if (rank == DoctorRank) {
 		return "Doctor";
 	}
-	throw;
+	throw std::invalid_argument("wrong value rank!");
+}
+uizi::Rank::Rank() {
+	this->rank = NoRank;
 }

@@ -1,3 +1,5 @@
+#include <iostream>
+
 /**
 * @brief Точка входа в программу
 * @return 0 в случае успеха

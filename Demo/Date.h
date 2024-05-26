@@ -17,7 +17,7 @@ namespace uizi {
 			int yearInt = 0;
 			is >> dateInt >> monthInt >> yearInt;
 			if (dateInt <= 0 || dateInt > 31 || monthInt <= 0 || monthInt > 12 || yearInt < 0) {
-				throw;
+				throw std::invalid_argument("wrong value date or month or year!");
 			}
 			date.date = dateInt;
 			date.month = (Month)monthInt;
@@ -30,5 +30,11 @@ namespace uizi {
 		}
 		Date();
 		std::string toString() const;
+		friend bool operator==(const Date& d1, const Date& d2) {
+			return (d1.date == d2.date && d1.month == d2.month && d1.year == d2.year);
+		}
+		friend bool operator!=(const Date& d1, const Date& d2) {
+			return d1.date != d2.date || d1.month != d2.month || d1.year != d2.year;
+		}
 	};
 }

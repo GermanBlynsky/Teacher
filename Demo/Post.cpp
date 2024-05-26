@@ -20,3 +20,6 @@ void uizi::Post::setPost(enum Post_ post) {
 uizi::Post::Post(enum Post_ post) {
 	this->post = post;
 }
+uizi::Post::Post() {
+	this->post = GreatPost;
+}

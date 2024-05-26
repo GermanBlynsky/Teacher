@@ -25,12 +25,13 @@ namespace uizi {
 				post.setPost(ProfessorPost);
 				return is;
 			}
-			throw;
+			throw std::invalid_argument("wrong value post!");
 		}
 		friend std::ostream& operator<<(std::ostream& os, Post &post) {
 			os << post.toString();
 			return os;
 		}
+		Post();
 	};
 }
 
