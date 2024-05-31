@@ -30,6 +30,9 @@ namespace uizi {
 			os << rank.toString();
 			return os;
 		}
+		friend bool operator==(const Rank& r1, const Rank& r2) {
+			return r1.rank == r2.rank;
+		}
 		Rank();
 	};
 }

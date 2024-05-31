@@ -20,7 +20,7 @@ namespace uizi {
 		}
 		friend std::istream& operator>>(std::istream& is, Person& person)
 		{
-			std::string name;
+			FullName name;
 			int gender;
 			Date birth;
 			if (is >> name >> gender >> birth) {
@@ -28,6 +28,9 @@ namespace uizi {
 			}
 			return is;
 		}
+		Date GetDate() const;
+		Gender GetGender() const;
+		FullName GetName() const;
 	};
 
 }

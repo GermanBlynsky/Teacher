@@ -23,6 +23,13 @@ namespace uizi {
 			}
 			throw std::invalid_argument("wrong value degree!");
 		}
+		friend std::ostream& operator<<(std::ostream& os, Degree& degree){
+			os << degree.toString();
+			return os;
+		}
+		friend bool operator==(const Degree& d1, const Degree& d2) {
+			return d1.degree == d2.degree;
+		}
 		Degree();
 	};
 }
