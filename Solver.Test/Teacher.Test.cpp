@@ -1,12 +1,6 @@
 #include "CppUnitTest.h"
 #include "..\Demo\Teacher.h"
-#include "string"
-#include "..\Demo\Date.h"
-#include "..\Demo\Degree.h"
-#include "..\Demo\Person.h"
-#include "..\Demo\Post.h"
-#include "..\Demo\Rank.h"
-
+#include <string>
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TeaceherTest
@@ -14,11 +8,10 @@ namespace TeaceherTest
 	TEST_CLASS(DateTest)
 	{
 	public:
-		using FullName = std::string;
 		TEST_METHOD(equal_by_date)
 		{
 			using namespace uizi;
-			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
+			FullName name1 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ", name2 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ";
 			Date birth1(23, 12, 1952), birth2(23, 12, 1952);
 			Post post1(DocentPost), post2(DocentPost);
 			Degree degree1(DocentDegree), degree2(DocentDegree);
@@ -31,7 +24,7 @@ namespace TeaceherTest
 		TEST_METHOD(equal_by_degree)
 		{
 			using namespace uizi;
-			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
+			FullName name1 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ", name2 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ";
 			Date birth1(23, 12, 1952), birth2(23, 12, 1952);
 			Post post1(DocentPost), post2(DocentPost);
 			Degree degree1(DocentDegree), degree2(DocentDegree);
@@ -44,7 +37,7 @@ namespace TeaceherTest
 		TEST_METHOD(equal_by_post)
 		{
 			using namespace uizi;
-			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
+			FullName name1 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ", name2 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ";
 			Date birth1(23, 12, 1952), birth2(23, 12, 1952);
 			Post post1(DocentPost), post2(DocentPost);
 			Degree degree1(DocentDegree), degree2(DocentDegree);
@@ -57,7 +50,7 @@ namespace TeaceherTest
 		TEST_METHOD(equal_by_rank)
 		{
 			using namespace uizi;
-			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
+			FullName name1 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ", name2 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ";
 			Date birth1(23, 12, 1952), birth2(23, 12, 1952);
 			Post post1(DocentPost), post2(DocentPost);
 			Degree degree1(DocentDegree), degree2(DocentDegree);
@@ -70,7 +63,7 @@ namespace TeaceherTest
 		TEST_METHOD(equal_by_name)
 		{
 			using namespace uizi;
-			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
+			FullName name1 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ", name2 = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ";
 			Date birth1(23, 12, 1952), birth2(23, 12, 1952);
 			Post post1(DocentPost), post2(DocentPost);
 			Degree degree1(DocentDegree), degree2(DocentDegree);
@@ -82,14 +75,16 @@ namespace TeaceherTest
 		}
 		TEST_METHOD(to_string) {
 			using namespace uizi;
-			FullName name = "Вася Пупкин";
+			FullName name = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ";
 			Date birth(23, 12, 1952);
 			Post post(DocentPost);
 			Degree degree(DocentDegree);
 			Rank rank(CandidatRank);
 			Gender gender(NonBinary);
 			Teacher teacher1(name, birth, post, degree, rank, gender);
-
+			std::string b = "Р’Р°СЃСЏ РџСѓРїРєРёРЅ 23.12.1952 DocentPost DocentDegree CandidatRank NonBinary";
+			std::string a = teacher1.toString();
+			Assert::IsTrue(a == b);
 		}
 	};
 }
