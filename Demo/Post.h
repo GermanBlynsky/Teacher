@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 #include <iostream>
 namespace uizi {
 	enum Post_{GreatPost = 0, DocentPost = 1, ProfessorPost = 2};

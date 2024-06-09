@@ -18,10 +18,10 @@
     <ClCompile Include="Date.Test.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Teacher.Test.cpp">
+    <ClCompile Include="Degree.Test.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Degree.Test.cpp">
+    <ClCompile Include="Teacher.Teat.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

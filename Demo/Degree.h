@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <string>
 namespace uizi {
 	enum Degree_{DocentDegree = 0, ProfessorDegree = 1};
 	class Degree

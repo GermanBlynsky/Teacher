@@ -1,8 +1,9 @@
 #include "CppUnitTest.h"
 #include "..\Demo\Degree.h"
+#include "..\Demo\Degree.cpp"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace DateTest
+namespace DegreeTest
 {
 	TEST_CLASS(DegreeTest)
 	{

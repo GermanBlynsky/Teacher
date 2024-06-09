@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 #include <iostream>
 namespace uizi {
 	enum Rank_{NoRank = 0, CandidatRank = 1, DoctorRank = 2};
