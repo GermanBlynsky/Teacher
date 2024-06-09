@@ -1,6 +1,4 @@
 #include "Person.h"
-#include "Date.h"
-#include "Degree.h"
 #include "sstream"
 
 uizi::Person::Person(const Gender& gender, const FullName& name, const Date& birth){

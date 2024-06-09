@@ -1,6 +1,9 @@
 #include "CppUnitTest.h"
 #include "..\Demo\Teacher.h"
 #include "..\Demo\Teacher.cpp"
+#include "..\Demo\Rank.cpp"
+#include "..\Demo\Post.cpp"
+#include "..\Demo\Person.cpp"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace TeacherTest
@@ -75,15 +78,16 @@ namespace TeacherTest
 		}
 		TEST_METHOD(to_string) {
 			using namespace uizi;
-			FullName name = "Вася Пупкин";
-			Date birth(23, 12, 1952);
-			Post post(DocentPost);
-			Degree degree(DocentDegree);
-			Rank rank(CandidatRank);
-			Gender gender(NonBinary);
-			Teacher teacher1(name, birth, post, degree, rank, gender);
-			std::string b = "Вася Пупкин 23.12.1952 DocentPost DocentDegree CandidatRank NonBinary";
-			std::string a = teacher1.toString();
+			setlocale(LC_ALL, "ru_RU.UTF-8");
+			std::string name = "Вася Пупкин";
+			Date birth = Date(23, 12, 1952);
+			Post post = Post(DocentPost);
+			Degree degree = Degree(DocentDegree);
+			Rank rank = Rank(CandidatRank);
+			Gender gender = Gender(Male);
+			Teacher teacher = Teacher(name, birth, post, degree, rank, gender);
+			std::string b = "Вася Пупкин Male 23.12.1952 Docent Docent Candidat";
+			std::string a = teacher.toString();
 			Assert::IsTrue(a == b);
 		}
 	};

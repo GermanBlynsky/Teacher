@@ -5,41 +5,41 @@
 namespace uizi {
 	using FullName = std::string;
 	/*
-	*@brief Гендеры
+	*@brief Р“РµРЅРґРµСЂС‹
 	*/
 	enum Gender { Male = 0, Female = 1, NonBinary = 3 };
 	class Person
 	{
 		/*
-		*@brief Имя
+		*@brief РРјСЏ
 		*/
 		FullName name;
 		/*
-		*@brief Гендеры
+		*@brief Р“РµРЅРґРµСЂС‹
 		*/
 		Gender gender;
 		/*
-		*@brief Дата рождения
+		*@brief Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ
 		*/
 		Date birth;
 	public:
 		/*
-		*@brief Конструктор класса Person через ввод гендера, имя и даты рождения
+		*@brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Person С‡РµСЂРµР· РІРІРѕРґ РіРµРЅРґРµСЂР°, РёРјСЏ Рё РґР°С‚С‹ СЂРѕР¶РґРµРЅРёСЏ
 		*/
 		Person(const Gender& gender, const FullName& name, const Date& birth);
 		/*
-		*@brief метод класса, преобразовывающий в строку
+		*@brief РјРµС‚РѕРґ РєР»Р°СЃСЃР°, РїСЂРµРѕР±СЂР°Р·РѕРІС‹РІР°СЋС‰РёР№ РІ СЃС‚СЂРѕРєСѓ
 		*/
 		std::string toString() const;
 		/*
-		*@brief Перегрузка оператора сдвига влево
+		*@brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃРґРІРёРіР° РІР»РµРІРѕ
 		*/
 		friend std::ostream& operator<<(std::ostream& os , const Person& person) {
 			os << person.toString();
 			return os;
 		}
 		/*
-		*@brief Перегрузка оператора сдвига вправо
+		*@brief РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃРґРІРёРіР° РІРїСЂР°РІРѕ
 		*/
 		friend std::istream& operator>>(std::istream& is, Person& person)
 		{

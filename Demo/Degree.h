@@ -5,24 +5,24 @@ namespace uizi {
 	class Degree
 	{
 		/*
-		*@brief Научная степень
+		*@brief РќР°СѓС‡РЅР°СЏ СЃС‚РµРїРµРЅСЊ
 		*/
 		Degree_ degree;
 	public:
 		/*
-		*@brief Конструктор класса Degree
+		*@brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Degree
 		*/
 		Degree(enum Degree_ degree);
 		/*
-		*@brief метод класса, преобразовающий экземпляр класса в строку
+		*@brief РјРµС‚РѕРґ РєР»Р°СЃСЃР°, РїСЂРµРѕР±СЂР°Р·РѕРІР°СЋС‰РёР№ СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° РІ СЃС‚СЂРѕРєСѓ
 		*/
 		std::string toString() const;
 		/*
-		*@brief Сеттер класса Degree
+		*@brief РЎРµС‚С‚РµСЂ РєР»Р°СЃСЃР° Degree
 		*/
 		void setDegree(Degree_ degree);
 		/*
-		*@brief перегрузка оператора сдвига вправо
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃРґРІРёРіР° РІРїСЂР°РІРѕ
 		*/
 		friend std::istream& operator>>(std::istream& is, Degree& degree) {
 			std::string degreeStr;
@@ -38,20 +38,20 @@ namespace uizi {
 			throw std::invalid_argument("wrong value degree!");
 		}
 		/*
-		*@brief перегрузка оператора сдвига влево
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃРґРІРёРіР° РІР»РµРІРѕ
 		*/
 		friend std::ostream& operator<<(std::ostream& os, Degree& degree){
 			os << degree.toString();
 			return os;
 		}
 		/*
-		*@brief перегрузка оператора равенства
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЂР°РІРµРЅСЃС‚РІР°
 		*/
 		friend bool operator==(const Degree& d1, const Degree& d2) {
 			return d1.degree == d2.degree;
 		}
 		/*
-		*@brief Конструктор по умолчанию
+		*@brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		*/
 		Degree();
 	};

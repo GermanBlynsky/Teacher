@@ -7,24 +7,24 @@ namespace uizi {
 	class Date
 	{
 		/*
-		*@brief день рождения
+		*@brief РґРµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ
 		*/
 		int date;
 		/*
-		*@brief месяц рождения
+		*@brief РјРµСЃСЏС† СЂРѕР¶РґРµРЅРёСЏ
 		*/
 		Month month;
 		/*
-		*@brief год рождения
+		*@brief РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ
 		*/
 		int year;
 	public:
 		/*
-		*@brief конструктор класса Date через ввод дня, месяца и года рождения
+		*@brief РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Date С‡РµСЂРµР· РІРІРѕРґ РґРЅСЏ, РјРµСЃСЏС†Р° Рё РіРѕРґР° СЂРѕР¶РґРµРЅРёСЏ
 		*/
 		Date(int date, int month, int year);
 		/*
-		*@brief перегрузка оператора сдвига вправо
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃРґРІРёРіР° РІРїСЂР°РІРѕ
 		*/
 		friend std::istream& operator>>(std::istream& is, Date& date) {
 			int dateInt = 0;
@@ -40,28 +40,28 @@ namespace uizi {
 			return is;
 		}
 		/*
-		*@brief перегрузка оператора сдвига влево
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃРґРІРёРіР° РІР»РµРІРѕ
 		*/
 		friend std::ostream& operator<<(std::ostream& os, const Date& date) {
 			os << date.toString();
 			return os;
 		}
 		/*
-		*@brief Конструктор по умолчанию
+		*@brief РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		*/
 		Date();
 		/*
-		*@brief Метод класса для проебразования экземпляра класса Date в строку
+		*@brief РњРµС‚РѕРґ РєР»Р°СЃСЃР° РґР»СЏ РїСЂРѕРµР±СЂР°Р·РѕРІР°РЅРёСЏ СЌРєР·РµРјРїР»СЏСЂР° РєР»Р°СЃСЃР° Date РІ СЃС‚СЂРѕРєСѓ
 		*/
 		std::string toString() const;
 		/*
-		*@brief перегрузка оператора равенства
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЂР°РІРµРЅСЃС‚РІР°
 		*/
 		friend bool operator==(const Date& d1, const Date& d2) {
 			return (d1.date == d2.date && d1.month == d2.month && d1.year == d2.year);
 		}
 		/*
-		*@brief перегрузка оператора неравенства
+		*@brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РЅРµСЂР°РІРµРЅСЃС‚РІР°
 		*/
 		friend bool operator!=(const Date& d1, const Date& d2) {
 			return d1.date != d2.date || d1.month != d2.month || d1.year != d2.year;

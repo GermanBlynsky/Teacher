@@ -21,7 +21,7 @@
     <ClCompile Include="Degree.Test.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Teacher.Teat.cpp">
+    <ClCompile Include="Teacher.Test.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
