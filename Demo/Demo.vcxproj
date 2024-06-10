@@ -28,11 +28,6 @@
     <ClCompile Include="Teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Solver\Solver.vcxproj">
-      <Project>{4c16314d-5284-4b2c-83b0-37329e7e4ea6}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Date.h" />
     <ClInclude Include="Degree.h" />
     <ClInclude Include="Person.h" />
@@ -126,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
