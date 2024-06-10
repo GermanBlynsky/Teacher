@@ -18,7 +18,7 @@ int main()
 	Gender gender = Gender(Male);
 	Teacher teacher = Teacher(name, birth, post, degree, rank, gender);
 	std::string c = teacher.toString();
-	std::cout << c;
+	std::cout << c << "\n";
 	std::string name2 = "Маша Непупкина";
 	Date birth2 = Date(23, 12, 1952);
 	Post post2 = Post(ProfessorPost);
@@ -26,13 +26,19 @@ int main()
 	Rank rank2 = Rank(DoctorRank);
 	Gender gender2 = Gender(Female);
 	Teacher teacher2 = Teacher(name2, birth2, post2, degree2, rank2, gender2);
-	std::string a = teacher.toString();
+	std::string a = teacher2.toString();
 	std::cout << a << "\n";
 	if (teacher.equalByDate(teacher2)) {
-		std::cout << " Даты рождения совпадают";
+		std::cout << " Даты рождения совпадают" << "\n";
 	}
 	else {
-		std::cout << "Даты рождения несовпадают";
+		std::cout << "Даты рождения несовпадают" << "\n";
+	}
+	if (teacher.equalByName(teacher2)) {
+		std::cout << " Имена совпадают" << "\n";
+	}
+	else {
+		std::cout << "Имена не совпадают" << "\n";
 	}
 	return 0;
 }
