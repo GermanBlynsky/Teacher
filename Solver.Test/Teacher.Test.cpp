@@ -11,7 +11,7 @@ namespace TeacherTest
 	TEST_CLASS(TeacherTest)
 	{
 	public:
-		TEST_METHOD(equal_by_date)
+		TEST_METHOD(EqualBuDate_23_12_1952_True)
 		{
 			using namespace uizi;
 			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
@@ -24,7 +24,7 @@ namespace TeacherTest
 			Teacher teacher2(name2, birth2, post2, degree2, rank2, gender2);
 			Assert::IsTrue(teacher1.equalByDate(teacher2));
 		}
-		TEST_METHOD(equal_by_degree)
+		TEST_METHOD(EqualByDegree_DocentDegree_True)
 		{
 			using namespace uizi;
 			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
@@ -37,7 +37,7 @@ namespace TeacherTest
 			Teacher teacher2(name2, birth2, post2, degree2, rank2, gender2);
 			Assert::IsTrue(teacher1.equalByDegree(teacher2));
 		}
-		TEST_METHOD(equal_by_post)
+		TEST_METHOD(EqualByPost_DocentPost_True)
 		{
 			using namespace uizi;
 			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
@@ -50,7 +50,7 @@ namespace TeacherTest
 			Teacher teacher2(name2, birth2, post2, degree2, rank2, gender2);
 			Assert::IsTrue(teacher1.equalByPost(teacher2));
 		}
-		TEST_METHOD(equal_by_rank)
+		TEST_METHOD(EqualByRank_CandidatRank_True)
 		{
 			using namespace uizi;
 			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
@@ -63,7 +63,7 @@ namespace TeacherTest
 			Teacher teacher2(name2, birth2, post2, degree2, rank2, gender2);
 			Assert::IsTrue(teacher1.equalByRank(teacher2));
 		}
-		TEST_METHOD(equal_by_name)
+		TEST_METHOD(EqualByName_VasiyPupkin_True)
 		{
 			using namespace uizi;
 			FullName name1 = "Вася Пупкин", name2 = "Вася Пупкин";
@@ -76,7 +76,7 @@ namespace TeacherTest
 			Teacher teacher2(name2, birth2, post2, degree2, rank2, gender2);
 			Assert::IsTrue(teacher1.equalByName(teacher2));
 		}
-		TEST_METHOD(to_string) {
+		TEST_METHOD(ToString_True) {
 			using namespace uizi;
 			setlocale(LC_ALL, "ru_RU.UTF-8");
 			std::string name = "Вася Пупкин";

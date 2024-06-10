@@ -8,14 +8,14 @@ namespace DegreeTest
 	TEST_CLASS(DegreeTest)
 	{
 	public:
-		TEST_METHOD(operator_equal_equal)
+		TEST_METHOD(OperatorEqualEequal_DocentDegree_True)
 		{
 			using namespace uizi;
 			Degree degree1 = Degree(DocentDegree);
 			Degree degree2 = Degree(DocentDegree);
 			Assert::IsTrue(degree1 == degree2);
 		}
-		TEST_METHOD(to_string)
+		TEST_METHOD(ToString_DocentDegree_True)
 		{
 			using namespace uizi;
 			Degree degree1 = Degree(DocentDegree);

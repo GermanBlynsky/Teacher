@@ -8,7 +8,7 @@ namespace DateTest
 	TEST_CLASS(DateTest)
 	{
 	public:
-		TEST_METHOD(operator_equal_equal)
+		TEST_METHOD(OperatorEqualEequal_123_123_True)
 		{
 			setlocale(LC_ALL, "ru_RU.UTF-8");
 			int date = 1;
@@ -18,14 +18,14 @@ namespace DateTest
 			uizi::Date b(date, month, year);
 			Assert::IsTrue(a == b);
 		}
-		TEST_METHOD(operator_not_equal)
+		TEST_METHOD(OperatorNotEqual_111_222_True)
 		{
 			setlocale(LC_ALL, "ru_RU.UTF-8");
 			uizi::Date a(1, 1, 1);
 			uizi::Date b(2, 2, 2);
 			Assert::IsTrue(a != b);
 		}
-		TEST_METHOD(to_string)
+		TEST_METHOD(ToString_23_12_1987_True)
 		{
 			setlocale(LC_ALL, "ru_RU.UTF-8");
 			uizi::Date a(23, 12, 1987);
